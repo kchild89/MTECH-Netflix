@@ -2,17 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix Project</title>
+    <title>Netflix Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="output.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('/Images/Netflix-Background.jpg'); 
+            background-size: 115%;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+        }
+    </style>
 </head>
-<body>
-    <div class="bg-[url('/Images/Netflix-Background.jpg')] h-screen bg-cover bg-center">
-        <div class="header flex flex-row">
-            <img src="/Images/logo.png" alt="Netflix Logo" class="w-64">
+<body class="bg-black bg-opacity-60 flex flex-col items-center justify-center text-white px-4 sm:px-8">
 
+    <div class="absolute top-4 right-4 flex space-x-4 z-20">
+        <button class="border-2 border-white bg-transparent text-white font-bold py-2 px-8">English</button>
+        <button class="bg-red-600 hover:bg-red-500 text-white font-bold py-2 px-4 rounded">Sign In</button>
+    </div>
+
+
+    <img src="/Images/logo.png" alt="Netflix Logo" class="h-[120px] absolute top-2 left-4">
+
+
+    
+
+    <div class="text-center relative z-10">
+        <h1 class="text-4xl sm:text-5xl font-bold mb-4">Unlimited movies, TV shows, and more.</h1>
+        <p class="text-lg sm:text-xl mb-6">Watch anywhere. Cancel anytime.</p>
+        <p class="text-lg sm:text-xl mb-6">Ready to watch? Enter your email to create or restart your membership.</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-0"> <!-- Set gap to 0 -->
+            <input type="email" placeholder="Email address" class="p-3 w-full sm:w-80 text-black mb-0"> 
+            <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 mt-0">Get started</button> 
         </div>
     </div>
-   
 </body>
 </html>
